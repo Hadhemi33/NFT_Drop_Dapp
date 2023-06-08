@@ -1,8 +1,18 @@
 import React from 'react'
+import {useAddress , useDisconnect , useMetamask} from "@thirdweb-dev/react"
 
 function NFTDropPage() {
+    {/*Auth */} 
+    {/*Connect to metaMask : by getting an instance  */} 
+    const connectWithMetaMask = useMetamask();
+    const address = useAddress();
+    const disconnect =useDisconnect()
+
+    console.log(address)
+
+
   return (
-    <div className="flex h-screen flex-col lg:grid lg:grid-cols-10" >
+    <div className="flex  flex-col h-screen lg:grid lg:grid-cols-10" >
     {/*Left */}  
         <div className="bg-gradient-to-br from-cyan-800 to-rose-500 lg:col-span-4">
     <div className='flex flex-col items-center justify-center py-2 lg:min-h-screen'>
@@ -32,10 +42,12 @@ function NFTDropPage() {
         <span className='font-extrabold underline
          decoration-pink-600/50'>PAPAFAM</span>
           {' '}NFT Market Place</h1>
-        <button className='rounded-full
+        <button onClick={()=>{address ? disconnect(): connectWithMetaMask()}} className='rounded-full
          bg-rose-400 px-4 py-2 text-xs font-bold
           text-white lg:px:5 lg:py-3'>
-            Sign In</button>
+            {address? 'Sign Out' : 'Connect Wallet'}
+            </button>
+           
     </header>
     <hr className='my-2 border ' />
     {/*Content */} 
