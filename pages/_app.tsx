@@ -4,7 +4,7 @@ import {ChainId , ThirdwebProvider}from "@thirdweb-dev/react"
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
-      <ThirdwebProvider activeChain="ethereum">
+      <ThirdwebProvider activeChain="goerli">
   <Component {...pageProps} />
   </ThirdwebProvider>)
 }
