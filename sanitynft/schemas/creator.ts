@@ -15,11 +15,6 @@ export default defineType({
       title: 'Address',
       type: 'string',
     },
-    {
-      name: 'bio',
-      title: 'Bio',
-      type: 'string',
-    },
 
     defineField({
       name: 'slug',
@@ -39,4 +34,5 @@ export default defineType({
       },
     }),
   ],
+  
 })
