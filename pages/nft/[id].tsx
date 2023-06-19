@@ -117,11 +117,11 @@ const notification= toast.loading('Minting.....',{
 
            <div className=' rounded-xl bg-gradient-to-br from-yellow-400 to-purple-600 p-2'>
             
-           {/* <img   
+           <img   
        className='w-44 rounded-xl object-cover lg:h-96 lg:w-72'
              src={urlFor(collection.previewImage).url()} alt="" 
            
-             /> */}
+             />
            </div>
 
              <div className='space-y-2 p-5 text-center '>
@@ -159,7 +159,7 @@ const notification= toast.loading('Minting.....',{
     {/*Content */} 
 
     <div className='mt-10 flex flex-1 flex-col items-center space-y-6  text-center  lg:justify-center  lg:space-y-0 '>
-        {/* <img className='w-80 object-cover pb-10 lg:h-40' src={urlFor(collection.mainImage).url()} alt="" /> */}
+        <img className='w-80 object-cover pb-10 lg:h-40' src={urlFor(collection.mainImage).url()} alt="" />
        
         
         <h1 className='text-3xl font-bold lg:text-5xl lg::font-extrabold'>{collection.title}</h1>
@@ -172,9 +172,9 @@ const notification= toast.loading('Minting.....',{
 
         )}
         {loading && (
-          // <img   className='h-80 w-80 object-contain' src="https://cdn.hackernoon.com/images/0*4Gzjgh9Y7Gu8KEtZ.gif" alt=""
-          //  />
-          <h1></h1>
+          <img   className='h-80 w-80 object-contain' src="https://cdn.hackernoon.com/images/0*4Gzjgh9Y7Gu8KEtZ.gif" alt=""
+           />
+          
         )}
     </div>
     {/*Mint Buttom */} 
