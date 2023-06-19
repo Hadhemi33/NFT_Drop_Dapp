@@ -168,7 +168,7 @@ const notification= toast.loading('Minting.....',{
         <p className='pt-5 text-xl text-green-500  animate-pulse '>Loading Supply Count .... </p>
 
         ):(
-          <p className='pt-5 text-xl text-green-500  '>{claimedSupply} / {totalSupply.toString()} NFT's claimed</p>
+          <p className='pt-5 text-xl text-green-500  '>{claimedSupply} / {totalSupply?.toString()} NFT's claimed</p>
 
         )}
         {loading && (
