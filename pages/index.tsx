@@ -28,11 +28,11 @@ const Home=({collections}:Props)=>{
 
             <div className='flex flex-col items-center cursor-pointer transition-all 
             duration-200 hover:scale-105'>
-
+{/* 
               <img   
               className='h-96 w-60 rounded-2xl object-cover'
               src={urlFor(collection.mainImage).url()} 
-              alt="" />
+              alt="" /> */}
 
               <div className='p-5'>
                <h2 className='text-3xl'>{collection.title}</h2>
