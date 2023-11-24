@@ -8,7 +8,7 @@ pipeline {
             }
         }
        
-
+'''
         stage('Installation') {
             steps {
                 // // Install Node.js using NVM (Node Version Manager)
@@ -20,7 +20,7 @@ pipeline {
                  sh 'npm install'
             }
         }
-
+'''
 
         // stage('Build and Package') {
         //     steps {
@@ -31,7 +31,7 @@ pipeline {
         //         }
         //     }
         // }
-
+'''
         stage('Test') {
             steps {
                 script {
@@ -52,7 +52,7 @@ pipeline {
             }
         }
     }
-
+'''
     post {
         always {
             script {
