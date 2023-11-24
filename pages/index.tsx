@@ -16,9 +16,9 @@ const Home=({collections}:Props)=>{
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <h1 className='mb-10 text-4xl font-extralight'>The  {''}
+      <h1 className='mb-10 text-4xl font-extralight  ' style={{ color: 'black' }}>The  {''}
         <span className='font-extrabold underline
-         decoration-pink-600/50'>PAPAFAM</span>
+         decoration-black-600/50'>PAPAFAM</span>
           {' '}NFT Market Place</h1>
       <main className='bg-slate-100 p-10 shadow-xl  shadow-rose-400/20 '>
         <div className='grid space-x-3 md:grid-cols-2  lg:grid-cols-3
