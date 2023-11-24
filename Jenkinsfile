@@ -30,7 +30,11 @@ pipeline {
         }
         stage('Build') {
             steps {
-                sh 'npm run build'
+                dir('./sanitynft') {
+                   // Navigate to the subdirectory
+                   sh 'npm run build'
+                }
+                
             }
         }
 
