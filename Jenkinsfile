@@ -16,8 +16,8 @@ pipeline {
         stage('Build and Package') {
             steps {
                 sh 'npm install'
-                sh 'npm run build'
-                sh 'docker build -t votre-image-docker .'
+                // sh 'npm run build'
+                // sh 'docker build -t votre-image-docker .'
             }
         }
 
