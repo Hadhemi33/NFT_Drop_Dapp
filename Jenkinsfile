@@ -3,22 +3,33 @@
 pipeline {
     agent any
 
-    stages {
-        stage('Checkout') {
-            steps {
-                checkout([$class: 'GitSCM', branches: [[name: '*/jenko']], userRemoteConfigs: [[url: 'https://github.com/Hadhemi33/NFT_MarketPlace.git']]])
-            }
-        }
+    // stages {
+    //     stage('Checkout') {
+    //         steps {
+    //             checkout([$class: 'GitSCM', branches: [[name: '*/jenko']], userRemoteConfigs: [[url: 'https://github.com/Hadhemi33/NFT_MarketPlace.git']]])
+    //         }
+    //     }
 
-        stage('Build and Package') {
+    //     stage('Build and Package') {
+    //         steps {
+    //             sh 'npm install'
+    //             sh 'npm run dev'
+    //             // sh 'docker build -t votre-image-docker .'
+    //         }
+    //     }
+
+    //     stage('Test') {
+    //         steps {
+    //             sh 'npm test'
+    //         }
+    //     }
+    stages {
+        stage('Install dependencies ') {
             steps {
                 sh 'npm install'
-                sh 'npm run dev'
-                // sh 'docker build -t votre-image-docker .'
             }
         }
-
-        stage('Test') {
+        stage('Tests') {
             steps {
                 sh 'npm test'
             }
