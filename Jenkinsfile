@@ -15,7 +15,7 @@ pipeline {
         stage('Install Sanity dependencies') {
             steps {
                 dir('./sanitynft') {
-                    Navigate to the subdirectory
+                   // Navigate to the subdirectory
                     sh 'npm install'
                 }
             }
