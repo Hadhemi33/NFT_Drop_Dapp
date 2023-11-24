@@ -38,18 +38,7 @@ pipeline {
                 
             }
         }
-        stage('Build App') {
-            steps {
-               
-                   
-                   sh 'npm run build'
-                // sh 'docker build -t votre-image-docker .'
-
-                
-                
-                
-            }
-        }
+        
 
         stage('Dev') {
             steps {
