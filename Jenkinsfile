@@ -21,11 +21,9 @@ pipeline {
             }
         }
 
-        stage('Install dependencies') {
+        stage('Install APP dependencies') {
             steps {
                 sh 'npm install'
-                // sh 'npm run build'
-                // sh 'docker build -t votre-image-docker .'
             }
         }
         stage('Build') {
@@ -33,7 +31,22 @@ pipeline {
                 dir('./sanitynft') {
                    // Navigate to the subdirectory
                    sh 'npm run build'
+                // sh 'docker build -t votre-image-docker .'
+
                 }
+                
+                
+            }
+        }
+        stage('Build App') {
+            steps {
+               
+                   
+                   sh 'npm run build'
+                // sh 'docker build -t votre-image-docker .'
+
+                
+                
                 
             }
         }
@@ -44,18 +57,21 @@ pipeline {
 
                 sh 'npm run dev'
             }
+                sh 'npm run dev'
+
+
         }
         }
 
-        stage('Deploy') {
-            steps {
-                withCredentials([usernamePassword(credentialsId: 'docker-hub-credentials', usernameVariable: 'DOCKER_USERNAME', passwordVariable: 'DOCKER_PASSWORD')]) {
-                    sh "docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD"
-                }
-                sh 'docker push votre-utilisateur/votre-image-docker:latest'
-                sh 'docker-compose up -d'
-            }
-        }
+        // stage('Deploy') {
+        //     steps {
+        //         withCredentials([usernamePassword(credentialsId: 'docker-hub-credentials', usernameVariable: 'DOCKER_USERNAME', passwordVariable: 'DOCKER_PASSWORD')]) {
+        //             sh "docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD"
+        //         }
+        //         sh 'docker push votre-utilisateur/votre-image-docker:latest'
+        //         sh 'docker-compose up -d'
+        //     }
+        // }
     }
 
     post {
