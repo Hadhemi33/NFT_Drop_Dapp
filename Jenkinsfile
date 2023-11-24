@@ -40,7 +40,13 @@ pipeline {
         }
         
 
-        stage('Dev') {
+        stage('Dev App') {
+            steps {
+                sh 'npm run dev'
+            }
+
+        }
+        }stage('Dev') {
             steps {
                 dir('./sanitynft') {
 
