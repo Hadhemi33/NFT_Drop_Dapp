@@ -3,7 +3,7 @@
 pipeline {
     agent any
     tools {
-        nodejs "nodePara" // Specify the name of the NodeJS installation
+        nodejs "nodePara" 
     }
 
     stages {
@@ -15,7 +15,6 @@ pipeline {
         stage('Install Sanity dependencies') {
             steps {
                 dir('./sanitynft') {
-                   // Navigate to the subdirectory
                     sh 'npm install'
                 }
             }
@@ -38,6 +37,15 @@ pipeline {
 
         }
         }
+        stage('Run Tests') {
+            steps {
+                script {
+                    dir('./sanitynft') {
+                        sh 'npm test'
+                    }
+                }
+            }
+        }
 
         stage('Dev App') {
             steps {
@@ -48,9 +56,7 @@ pipeline {
         stage('Build') {
             steps {
                 dir('./sanitynft') {
-                   // Navigate to the subdirectory
                    sh 'npm run build'
-                // sh 'docker build -t votre-image-docker .'
 
                 }
                 
@@ -59,22 +65,10 @@ pipeline {
         }
         
 
-        // stage('Deploy') {
-        //     steps {
-        //         withCredentials([usernamePassword(credentialsId: 'docker-hub-credentials', usernameVariable: 'DOCKER_USERNAME', passwordVariable: 'DOCKER_PASSWORD')]) {
-        //             sh "docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD"
-        //         }
-        //         sh 'docker push votre-utilisateur/votre-image-docker:latest'
-        //         sh 'docker-compose up -d'
-        //     }
-        // }
+        /
     }
 
-    post {
-        always {
-            sh 'docker-compose down'
-        }
-    }
+    
 }
 
 
