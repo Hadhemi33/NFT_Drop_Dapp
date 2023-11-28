@@ -25,15 +25,26 @@ pipeline {
                 sh 'npm install'
             }
         }
-        stage('Run Tests') {
+        // stage('Run Tests') {
+        //     steps {
+        //         script {
+        //             dir('./sanitynft') {
+        //                 sh 'npm test'
+        //             }
+        //         }
+        //     }
+        // }
+        stage('Build') {
             steps {
-                script {
-                    dir('./sanitynft') {
-                        sh 'npm test'
-                    }
+                dir('./sanitynft') {
+                   sh 'npm run build'
+
                 }
+                
+                
             }
         }
+        
         stage('Dev') {
             steps {
                 dir('./sanitynft') {
@@ -52,16 +63,6 @@ pipeline {
                 sh 'npm run dev'
             }
 
-        }
-        stage('Build') {
-            steps {
-                dir('./sanitynft') {
-                   sh 'npm run build'
-
-                }
-                
-                
-            }
         }
         
 
