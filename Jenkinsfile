@@ -45,12 +45,12 @@ pipeline {
         //     }
         // }
         
-        // stage('Dev') {
-        //     steps {
-        //         dir('./sanitynft') {
+        stage('Dev') {
+            steps {
+                dir('./sanitynft') {
 
-        //         sh 'npm run dev'
-        //     }
+                sh 'npm run dev'
+            }
     
 
 
