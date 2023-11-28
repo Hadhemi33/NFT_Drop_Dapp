@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import Image from 'next/image'
 
 import Head from 'next/head'
@@ -29,7 +30,7 @@ const Home=({collections}:Props)=>{
             <div className='flex flex-col items-center cursor-pointer transition-all 
             duration-200 hover:scale-105'>
 
-              <img   
+              <img    
               className='h-96 w-60 rounded-2xl object-cover'
               src={urlFor(collection.mainImage).url()} 
               alt="" />

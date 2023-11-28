@@ -34,36 +34,36 @@ pipeline {
         //         }
         //     }
         // }
-        stage('Build') {
-            steps {
-                dir('./sanitynft') {
-                   sh 'npm run build'
+        // stage('Build') {
+        //     steps {
+        //         dir('./sanitynft') {
+        //            sh 'npm run build'
 
-                }
+        //         }
                 
                 
-            }
-        }
+        //     }
+        // }
         
-        stage('Dev') {
-            steps {
-                dir('./sanitynft') {
+        // stage('Dev') {
+        //     steps {
+        //         dir('./sanitynft') {
 
-                sh 'npm run dev'
-            }
+        //         sh 'npm run dev'
+        //     }
     
 
 
-        }
-        }
+        // }
+        // }
         
 
-        stage('Dev App') {
-            steps {
-                sh 'npm run dev'
-            }
+        // stage('Dev App') {
+        //     steps {
+        //         sh 'npm run dev'
+        //     }
 
-        }
+        // }
         
 
         
