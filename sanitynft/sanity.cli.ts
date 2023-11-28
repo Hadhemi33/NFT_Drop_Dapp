@@ -7,8 +7,8 @@ export const config = {
   dataset: 'production',
   apiVersion: '2023-06-08',
   // useCdn: 'production',
+  useCdn: false,
 }
 
 export const sanityClient = createClient(config)
 export const urlFor = (source: any) => createImageUrlBuilder(config).image(source)
-
