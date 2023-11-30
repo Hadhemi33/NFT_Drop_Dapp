@@ -67,7 +67,9 @@ pipeline {
                 sleep time: 30, unit: 'SECONDS'
 
                 // Open the URL using a headless browser or a command-line tool
-                sh 'xvfb-run -a -s "-screen 0 1024x768x24" your-command-to-open-url http://localhost:3333/'
+                // sh 'xvfb-run -a -s "-screen 0 1024x768x24" your-command-to-open-url http://localhost:3333/'
+                sh 'curl -sS http://localhost:3333/ > /dev/null'
+
             }
         }
     }
