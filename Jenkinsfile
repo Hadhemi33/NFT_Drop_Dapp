@@ -58,12 +58,12 @@ pipeline {
         }
         
 
-        // stage('Dev App') {
-        //     steps {
-        //         sh 'npm run dev'
-        //     }
+        stage('Dev App') {
+            steps {
+                sh 'npm run dev'
+            }
 
-        // }
+        }
         
 
         
