@@ -61,7 +61,7 @@ pipeline {
         script {
             dir('./sanitynft') {
                 // Run npm dev in the background
-                sh 'npm run dev &'
+                sh 'npm run dev '
 
                 // Wait for the server to start (adjust the sleep time accordingly)
                 sleep time: 30, unit: 'SECONDS'
