@@ -26,23 +26,22 @@ pipeline {
             }
         }
        
-        
-        stage('Dev') {
+        stage('Dev App') {
             steps {
                 sh 'npm run dev'
+            }
 
-                // dir('./sanitynft') {
+        }
+        stage('Dev') {
+            steps {
+                
+                dir('./sanitynft') {
 
-                // sh 'npm run dev'
+                sh 'npm run dev'
             }
         }
         }
-        //  stage('Dev App') {
-        //     steps {
-        //         sh 'npm run dev'
-        //     }
-
-        // }
+         
 //         stage('Dev') {
 //     steps {
 //         script {
