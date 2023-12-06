@@ -31,9 +31,9 @@ pipeline {
             steps {
                 sh 'npm run dev'
 
-                dir('./sanitynft') {
+                // dir('./sanitynft') {
 
-                sh 'npm run dev'
+                // sh 'npm run dev'
             }
         }
         }
