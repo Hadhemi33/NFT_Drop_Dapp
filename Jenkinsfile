@@ -14,8 +14,16 @@ pipeline {
         }
         stage('Install Sanity dependencies') {
             steps {
+                dir('./sanitynft') {
+                   // Navigate to the subdirectory
+                    sh 'npm install'
+                }
+            }
+        }
+        stage('Install  dependencies') {
+            steps {
                 
-                    sh 'npm install --force'
+                    sh 'npm install'
                 
             }
         }
