@@ -15,14 +15,14 @@ pipeline {
         stage('Install Sanity dependencies') {
             steps {
                 dir('./sanitynft') {
-                    sh 'npm install'
+                    sh 'npm install --force'
                 }
             }
         }
 
         stage('Install APP dependencies') {
             steps {
-                sh 'npm install'
+                sh 'npm install --force'
             }
         }
        
