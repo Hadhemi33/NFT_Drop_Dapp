@@ -12,14 +12,7 @@ pipeline {
                 checkout([$class: 'GitSCM', branches: [[name: '*/main']], userRemoteConfigs: [[url: 'https://github.com/Hadhemi33/NFT_MarketPlace']]])
             }
         }
-        stage('Install dependencies') {
-            steps {
-                
-                   
-                    // sh 'npm install '
-                
-            }
-        }
+        
         stage('Dev') {
             steps {
 
