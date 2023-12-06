@@ -12,11 +12,11 @@ pipeline {
                 checkout([$class: 'GitSCM', branches: [[name: '*/main']], userRemoteConfigs: [[url: 'https://github.com/Hadhemi33/NFT_MarketPlace']]])
             }
         }
-        stage('Install Sanity dependencies') {
+        stage('Install dependencies') {
             steps {
                 
                    
-                    sh 'npm install --force'
+                    // sh 'npm install '
                 
             }
         }
