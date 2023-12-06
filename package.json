@@ -12,8 +12,8 @@
 
     "dev": "next dev",
 
-    "build": "next build",
-
+    "build": "next build && next start",
+ 
     "start": "next start",
 
     "lint": "next lint",
